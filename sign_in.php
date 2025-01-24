@@ -14,39 +14,6 @@
 </head>
 
 <body>
-	<header id="site-header" class="w3l-header fixed-top">
-		<!--/nav-->
-		<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
-			<div class="container">
-				<h1><a class="navbar-brand" href="index.html"><span class="fa fa-play icon-log"
-							aria-hidden="true"></span>
-							MyShowz </a></h1>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				</div>
-				<div class="Login_SignUp" id="login_s">
-					<!-- style="font-size: 2rem ; display: inline-block; position: relative;" -->
-					<!-- <li class="nav-item"> -->
-					<a class="nav-link" href="sign_in.html"><i class="fa fa-user-circle-o"></i></a>
-					<!-- </li> -->
-				</div>
-				<!-- toggle switch for light and dark theme -->
-				<div class="mobile-position">
-					<nav class="navigation">
-						<div class="theme-switch-wrapper">
-							<label class="theme-switch" for="checkbox">
-								<input type="checkbox" id="checkbox">
-								<div class="mode-container">
-									<i class="gg-sun"></i>
-									<i class="gg-moon"></i>
-								</div>
-							</label>
-						</div>
-					</nav>
-				</div>
-			</div>
-		</nav>
-	</header>
-
 	<div class="container_signup_signin" id="container_signup_signin">
 		<div class="form-container sign-up-container">
 			<form name="sign-up-form" action="" method="POST">
@@ -75,6 +42,11 @@
 				<span>or use your account</span>
 				<input name="sign-in-email" type="email" placeholder="Email" required />
 				<input name="sign-in-passwd" type="password" placeholder="Password" required />
+
+				<?php if(isset($_POST['sign-in'])): ?>
+					<div id="error-message" style="color: red; margin-top: 5px;">Invalid email or password</div>
+				<?php endif; ?>
+				
 				<a href="#">Forgot your password?</a>
 				<button type="submit" name="sign-in">Sign In</button>
 			</form>
@@ -108,6 +80,8 @@
 		die("Connection failed: " . $conn->connect_error);
 	}
 
+	// SIGN UP OR REGISTER
+
 	if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sign-up'])) {
 		$name = $_POST['sign-up-name'];
 		$email = $_POST['sign-up-email']; 
@@ -122,39 +96,37 @@
 		}
 	}
 
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	}
+	// SIGN IN 
 	
-	if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sign-in'])) {
-		$email = $_POST['sign-in-email'];
-		$password = $_POST['sign-in-passwd'];
-	
-		// Simple query for testing
-		$sql = "SELECT * FROM userdata WHERE email='$email' AND password='$password'";
-		$result = $conn->query($sql);
-		
-		if ($result === false) {
-			die("Error in query: " . $conn->error);
-		}
-	
-		if ($result->num_rows > 0) {
-			session_start();
-			$user = $result->fetch_assoc();
-			$_SESSION['user_id'] = $user['id'];
-			$_SESSION['user_name'] = $user['name'];
-			$_SESSION['user_email'] = $user['email'];
-			
-			echo "<script>window.location.href = 'index.html';</script>";
-			exit();
-		} else {
-			echo "<script>alert('Invalid email or password');</script>";
-		}
-	}
+	session_start();
+
+if (isset($_POST['sign-in'])) {
+    $email = $_POST['sign-in-email'];
+    $password = $_POST['sign-in-passwd'];
+
+    // Use prepared statements to prevent SQL injection
+    $stmt = $conn->prepare("SELECT * FROM userdata WHERE email=? AND password=?");
+    $stmt->bind_param("ss", $email, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $user = $result->fetch_assoc();
+        $_SESSION['user_id'] = $user['userid'];
+        $_SESSION['type'] = $user['rotetype'];
+        
+        if ($_SESSION['type'] == 1) {
+            header("Location: admin/dashboard.php");
+        } else {
+            header("Location: index.php");
+        }
+        exit();
+    }
+}
 	
 	$conn->close();
 	?>
-
+	
 	<script type="text/javascript" src="assets/js/as-alert-message.min.js"></script>
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<!--/theme-change-->

@@ -57,6 +57,10 @@
 						<li class="nav-item">
 							<a class="nav-link" href="bookings.php">Bookings</a>
 						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="logout.php">Logout</a>
+						</li>
 					</ul>
 
 					<!--/search-right-->
@@ -101,12 +105,7 @@
 						<!--/search-right-->
 
 					</div>
-					<div class="Login_SignUp" id="login"
-						style="font-size: 2rem ; display: inline-block; position: relative;">
-						<!-- <li class="nav-item"> -->
-						<a class="nav-link" href="sign_in.html"><i class="fa fa-user-circle-o"></i></a>
-						<!-- </li> -->
-					</div>
+					
 				</div>
 				<!-- toggle switch for light and dark theme -->
 				<div class="mobile-position">
