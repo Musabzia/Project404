@@ -125,7 +125,7 @@
 		</nav>
 	</header>
 	<!-- main-slider -->
-	<section class="w3l-main-slider position-relative" id="home">
+	<!-- <section class="w3l-main-slider position-relative" id="home">
 		<div class="companies20-content">
 			<div class="owl-one owl-carousel owl-theme">
 				<div class="item">
@@ -218,10 +218,10 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- main-slider -->
 	<!--grids-sec1-->
-	<section class="w3l-grids">
+	<!-- <section class="w3l-grids">
 		<div class="grids-main py-5">
 			<div class="container py-lg-3">
 				<div class="headerhny-title">
@@ -314,10 +314,10 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!--//grids-sec1-->
 	<!--grids-sec2-->
-	<section class="w3l-grids">
+	<!-- <section class="w3l-grids">
 		<div class="grids-main py-5">
 			<div class="container py-lg-3">
 				<div class="headerhny-title">
@@ -480,10 +480,10 @@
 			</div>
 
 		</div>
-	</section>
+	</section> -->
 	<!--grids-sec2-->
 	<!--mid-slider -->
-	<section class="w3l-mid-slider position-relative">
+	<!-- <section class="w3l-mid-slider position-relative">
 		<div class="companies20-content">
 			<div class="owl-mid owl-carousel owl-theme">
 				<div class="item">
@@ -536,7 +536,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 </body>
 
 </html>
