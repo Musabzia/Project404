@@ -1,9 +1,11 @@
 <?php
 include ('connect.php');
 
-if(!isset($_SESSION['user_id'])){
-    echo '<script></script>';
-}
+// Check if the user is logged in
+$isLoggedIn = isset($_SESSION['user_id']);
+
+// Get the current page
+$currentPage = basename($_SERVER['PHP_SELF']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,70 +32,69 @@ if(!isset($_SESSION['user_id'])){
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="movies.html">Movies</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="Contact_Us.html">Contact</a>
-        </li>
-        
-        <?php if(isset($_SESSION['user_id'])): ?>
-            <li class="nav-item">
-                <a class="nav-link" href="booking.php">My Bookings</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="theaters.php">Theaters</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="logout.php">Logout</a>
-            </li>
-        <?php else: ?>
-            <li class="nav-item">
-                <div class="Login_SignUp" id="login">
-                    <a class="nav-link" href="sign_in.php"><i class="fa fa-user-circle-o"></i></a>
-                </div>
-            </li>
-        <?php endif; ?>
-    </ul>
-</div>
-                    <!-- search popup -->
-                    <div class="search-right">
-                        <a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search">
-                            Search <span class="fa fa-search ml-3" aria-hidden="true"></span>
-                        </a>
-                        <!-- search popup -->
-                        <div id="search" class="pop-overlay">
-                            <div class="popup">
-                                <form action="#" method="post" class="search-box">
-                                    <input type="search" placeholder="Search your Keyword" name="search"
-                                        required="required" autofocus="">
-                                    <button type="submit" class="btn">
-                                        <span class="fa fa-search" aria-hidden="true"></span>
-                                    </button>
-                                </form>
-                                <div class="browse-items">
-                                    <h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
-                                    <ul class="search-items">
-                                        <li><a href="movies.html">Action</a></li>
-                                        <li><a href="movies.html">Drama</a></li>
-                                        <li><a href="movies.html">Family</a></li>
-                                        <li><a href="movies.html">Thriller</a></li>
-                                        <li><a href="movies.html">Comedy</a></li>
-                                        <li><a href="movies.html">Romantic</a></li>
-                                        <li><a href="movies.html">Tv-Series</a></li>
-                                        <li><a href="movies.html">Horror</a></li>
-                                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item <?php echo ($currentPage == 'index.php') ? 'active' : ''; ?>">
+                            <a class="nav-link" href="index.php">Home</a>
+                        </li>
+                        <li class="nav-item <?php echo ($currentPage == 'movies.php') ? 'active' : ''; ?>">
+                            <a class="nav-link" href="movies.php">Movies</a>
+                        </li>
+                        <li class="nav-item <?php echo ($currentPage == 'about.html') ? 'active' : ''; ?>">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item <?php echo ($currentPage == 'Contact_Us.html') ? 'active' : ''; ?>">
+                            <a class="nav-link" href="Contact_Us.html">Contact</a>
+                        </li>
+                        
+                        <?php if($isLoggedIn): ?>
+                            <li class="nav-item <?php echo ($currentPage == 'booking.php') ? 'active' : ''; ?>">
+                                <a class="nav-link" href="booking.php">My Bookings</a>
+                            </li>
+                            <li class="nav-item <?php echo ($currentPage == 'theaters.php') ? 'active' : ''; ?>">
+                                <a class="nav-link" href="theaters.php">Theaters</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="logout.php">Logout</a>
+                            </li>
+                        <?php else: ?>
+                            <li class="nav-item">
+                                <div class="Login_SignUp" id="login">
+                                    <a class="nav-link" href="sign_in.php"><i class="fa fa-user-circle-o"></i></a>
                                 </div>
+                            </li>
+                        <?php endif; ?>
+                    </ul>
+                </div>
+                <!-- search popup -->
+                <div class="search-right">
+                    <a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search">
+                        Search <span class="fa fa-search ml-3" aria-hidden="true"></span>
+                    </a>
+                    <!-- search popup -->
+                    <div id="search" class="pop-overlay">
+                        <div class="popup">
+                            <form action="#" method="post" class="search-box">
+                                <input type="search" placeholder="Search your Keyword" name="search"
+                                    required="required" autofocus="">
+                                <button type="submit" class="btn">
+                                    <span class="fa fa-search" aria-hidden="true"></span>
+                                </button>
+                            </form>
+                            <div class="browse-items">
+                                <h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
+                                <ul class="search-items">
+                                    <li><a href="movies.html">Action</a></li>
+                                    <li><a href="movies.html">Drama</a></li>
+                                    <li><a href="movies.html">Family</a></li>
+                                    <li><a href="movies.html">Thriller</a></li>
+                                    <li><a href="movies.html">Comedy</a></li>
+                                    <li><a href="movies.html">Romantic</a></li>
+                                    <li><a href="movies.html">Tv-Series</a></li>
+                                    <li><a href="movies.html">Horror</a></li>
+                                </ul>
                             </div>
-                            <a class="close" href="#close">×</a>
                         </div>
+                        <a class="close" href="#close">×</a>
                     </div>
                 </div>
 

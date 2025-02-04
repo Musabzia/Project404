@@ -13,12 +13,12 @@
 </head>
 <body>
 	<?php
-	include 'header.php';
+	include ('header.php');
 	?>
 
 	
 	<!-- main-slider -->
-	<section class="w3l-main-slider position-relative" id="home">
+	<section class="w3l-main-slider position-relative" id="home">								
 		<div class="companies20-content">
 			<div class="owl-one owl-carousel owl-theme">
 				<div class="item">
@@ -123,14 +123,14 @@
 							<h3 class="hny-title">Popular Movies</h3>
 						</div>
 						<div class="headerhny-right text-lg-right">
-							<h4><a class="show-title" href="movies.html">Show all</a></h4>
+							<h4><a class="show-title" href="movies.php">Show all</a></h4>
 						</div>
 					</div>
 				</div>
 				<div class="w3l-populohny-grids">
 					<div class="item vhny-grid">
 						<div class="box16">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/wednesday.jpeg" alt="">
 								</figure>
@@ -149,7 +149,7 @@
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/commando2.jpeg" alt="">
 								</figure>
@@ -168,7 +168,7 @@
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/gujju2.jpeg" alt="">
 								</figure>
@@ -187,7 +187,7 @@
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/avtar-2.jpeg" alt="">
 								</figure>
@@ -219,14 +219,14 @@
 							<h3 class="hny-title">New Releases</h3>
 						</div>
 						<div class="headerhny-right text-lg-right">
-							<h4><a class="show-title" href="movies.html">Show all</a></h4>
+							<h4><a class="show-title" href="movies.php">Show all</a></h4>
 						</div>
 					</div>
 				</div>
 				<div class="owl-three owl-carousel owl-theme">
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/n1.jpg" alt="">
 								</figure>
@@ -241,16 +241,16 @@
 								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
-						<h3> <a class="title-gd" href="movies.html">No Time to Die</a></h3>
+						<h3> <a class="title-gd" href="movies.php">No Time to Die</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
 						<div class="button-center text-center mt-4">
-							<a href="movies.html" class="btn watch-button">Watch now</a>
+							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
 
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/n2.jpg" alt="">
 								</figure>
@@ -266,15 +266,15 @@
 								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
-						<h3> <a class="title-gd" href="movies.html">Mulan</a></h3>
+						<h3> <a class="title-gd" href="movies.php">Mulan</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
 						<div class="button-center text-center mt-4">
-							<a href="movies.html" class="btn watch-button">Watch now</a>
+							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/n3.jpg" alt="">
 								</figure>
@@ -290,15 +290,15 @@
 								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
-						<h3> <a class="title-gd" href="movies.html">Free Guy</a></h3>
+						<h3> <a class="title-gd" href="movies.php">Free Guy</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
 						<div class="button-center text-center mt-4">
-							<a href="movies.html" class="btn watch-button">Watch now</a>
+							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/n4.jpg" alt="">
 								</figure>
@@ -314,16 +314,16 @@
 								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
-						<h3> <a class="title-gd" href="movies.html">My Spy</a></h3>
+						<h3> <a class="title-gd" href="movies.php">My Spy</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
 						<div class="button-center text-center mt-4">
-							<a href="movies.html" class="btn watch-button">Watch now</a>
+							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
 
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/n5.jpg" alt="">
 								</figure>
@@ -339,15 +339,15 @@
 								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
-						<h3> <a class="title-gd" href="movies.html">Scoob</a></h3>
+						<h3> <a class="title-gd" href="movies.php">Scoob</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
 						<div class="button-center text-center mt-4">
-							<a href="movies.html" class="btn watch-button">Watch now</a>
+							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/n6.jpg" alt="">
 								</figure>
@@ -363,10 +363,10 @@
 								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
-						<h3> <a class="title-gd" href="movies.html">Downhill</a></h3>
+						<h3> <a class="title-gd" href="movies.php">Downhill</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
 						<div class="button-center text-center mt-4">
-							<a href="movies.html" class="btn watch-button">Watch now</a>
+							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
 					</div>
 				</div>
@@ -387,7 +387,7 @@
 									<span class="sub-text">Comedy</span>
 									<h3>Jumanji: The Next Level</h3>
 									<p>2019 ‧ Comedy/Action ‧ 2h 3m</p>
-									<a class="watch" href="movies.html"><span class="fa fa-play"
+									<a class="watch" href="movies.php"><span class="fa fa-play"
 											aria-hidden="true"></span>
 										Watch Trailer</a>
 								</div>
@@ -403,7 +403,7 @@
 									<span class="sub-text">Adventure</span>
 									<h3>Dolittle</h3>
 									<p>2020 ‧ Family/Adventure ‧ 1h 41m</p>
-									<a class="watch" href="movies.html"><span class="fa fa-play"
+									<a class="watch" href="movies.php"><span class="fa fa-play"
 											aria-hidden="true"></span>
 										Watch Trailer</a>
 								</div>
@@ -419,7 +419,7 @@
 									<span class="sub-text">Action</span>
 									<h3>Bad Boys for Life</h3>
 									<p>2020 ‧ Comedy/Action ‧ 2h 4m</p>
-									<a class="watch" href="movies.html"><span class="fa fa-play"
+									<a class="watch" href="movies.php"><span class="fa fa-play"
 											aria-hidden="true"></span>
 										Watch Trailer</a>
 								</div>
@@ -430,131 +430,9 @@
 			</div>
 		</div>
 	</section>
-	<!-- footer-66 -->
-	<footer class="w3l-footer">
-		<section class="footer-inner-main">
-			<div class="footer-hny-grids py-5">
-				<div class="container py-lg-4">
-					<div class="text-txt">
-						<div class="right-side">
-							<div class="row footer-about">
-								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.html"><img class="img-fluid" src="assets/images/banner1.jpg"
-											alt=""></a>
-								</div>
-								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.html"><img class="img-fluid" src="assets/images/banner2.jpg"
-											alt=""></a>
-								</div>
-								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.html"><img class="img-fluid" src="assets/images/banner3.jpg"
-											alt=""></a>
-								</div>
-								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.html"><img class="img-fluid" src="assets/images/banner4.jpg"
-											alt=""></a>
-								</div>
-							</div>
-							<div class="row footer-links">
-
-
-								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
-									<h6>Movies</h6>
-									<ul>
-										<li><a href="#">Movies</a></li>
-										<li><a href="#">Videos</a></li>
-										<li><a href="#">English Movies</a></li>
-										<li><a href="#">Tailor</a></li>
-										<li><a href="#">Upcoming Movies</a></li>
-										<li><a href="Contact_Us.html">Contact Us</a></li>
-									</ul>
-								</div>
-								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
-									<h6>Information</h6>
-									<ul>
-										<li><a href="index.html">Home</a> </li>
-										<li><a href="about.html">About</a> </li>
-										<li><a href="#">Tv Series</a> </li>
-										<li><a href="#">Blogs</a> </li>
-										<li><a href="sign_in.html">Login</a></li>
-										<li><a href="Contact_Us.html">Contact</a></li>
-									</ul>
-								</div>
-								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
-									<h6>Locations</h6>
-									<ul>
-										<li><a href="movies.html">Asia</a></li>
-										<li><a href="movies.html">France</a></li>
-										<li><a href="movies.html">Taiwan</a></li>
-										<li><a href="movies.html">United States</a></li>
-										<li><a href="movies.html">Korea</a></li>
-										<li><a href="movies.html">United Kingdom</a></li>
-									</ul>
-								</div>
-								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
-									<h6>Newsletter</h6>
-									<form action="#" class="subscribe mb-3" method="post">
-										<input type="email" name="email" placeholder="Your Email Address" required="">
-										<button><span class="fa fa-envelope-o"></span></button>
-									</form>
-									<p>Enter your email and receive the latest news, updates and special offers from us.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			</div>
-			<div class="below-section">
-				<div class="container">
-					<div class="copyright-footer">
-						<div class="columns text-lg-left">
-							<p>&copy; 2021 MyShowz. All rights reserved</p>
-					   </div>
-
-						<ul class="social text-lg-right">
-							<li><a href="#facebook"><span class="fa fa-facebook" aria-hidden="true"></span></a>
-							</li>
-							<li><a href="#linkedin"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
-							</li>
-							<li><a href="#twitter"><span class="fa fa-twitter" aria-hidden="true"></span></a>
-							</li>
-							<li><a href="#google"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
-							</li>
-
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- move top -->
-			<button onclick="topFunction()" id="movetop" title="Go to top">
-				<span class="fa fa-arrow-up" aria-hidden="true"></span>
-			</button>
-<script>
-				// When the user scrolls down 20px from the top of the document, show the button
-				window.onscroll = function () {
-					scrollFunction()
-				};
-
-				function scrollFunction() {
-					if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-						document.getElementById("movetop").style.display = "block";
-					} else {
-						document.getElementById("movetop").style.display = "none";
-					}
-				}
-
-				// When the user clicks on the button, scroll to the top of the document
-				function topFunction() {
-					document.body.scrollTop = 0;
-					document.documentElement.scrollTop = 0;
-				}
-</script>
-			<!-- /move top -->
-
-		</section>
-	</footer>
+	<?php
+	include('footer.php');
+	?>
 </body>
 
 </html>
