@@ -100,29 +100,29 @@
 	
 	session_start();
 
-if (isset($_POST['sign-in'])) {
-    $email = $_POST['sign-in-email'];
-    $password = $_POST['sign-in-passwd'];
+	if (isset($_POST['sign-in'])) {
+		$email = $_POST['sign-in-email'];
+		$password = $_POST['sign-in-passwd'];
 
-    // Use prepared statements to prevent SQL injection
-    $stmt = $conn->prepare("SELECT * FROM userdata WHERE email=? AND password=?");
-    $stmt->bind_param("ss", $email, $password);
-    $stmt->execute();
-    $result = $stmt->get_result();
+		// Use prepared statements to prevent SQL injection
+		$stmt = $conn->prepare("SELECT * FROM userdata WHERE email=? AND password=?");
+		$stmt->bind_param("ss", $email, $password);
+		$stmt->execute();
+		$result = $stmt->get_result();
 
-    if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc();
-        $_SESSION['user_id'] = $user['userid'];
-        $_SESSION['type'] = $user['rotetype'];
-        
-        if ($_SESSION['type'] == 1) {
-            header("Location: admin/dashboard.php");
-        } else {
-            header("Location: index.php");
-        }
-        exit();
-    }
-}
+		if ($result->num_rows > 0) {
+			$user = $result->fetch_assoc();
+			$_SESSION['user_id'] = $user['userid'];
+			$_SESSION['type'] = $user['rotetype'];
+			
+			if ($_SESSION['type'] == 1) {
+				header("Location: admin/dashboard.php");
+			} else {
+				header("Location: index.php");
+			}
+			exit();
+		}
+	}
 	
 	$conn->close();
 	?>

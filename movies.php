@@ -166,17 +166,98 @@ include('header.php');
 				<!-- FIRST ROW START FROM HERE -->
 				<div class="w3l-populohny-grids">
 
-					<?php
+				<!-- fIRST MOVIE -->
 
-					$sql = "SELECT DISTINCT movies.*, categories.catname 
+					<?php
+					$movieid = 1;
+					$sql = "SELECT movies.*, categories.catname 
 					FROM movies
-					INNER JOIN categories on categories.catid = movies.catid";
+					INNER JOIN categories on categories.catid = movies.catid
+					WHERE movies.movieid = $movieid";
 					$res = mysqli_query($conn, $sql);
 
 					if(mysqli_num_rows($res) > 0){
                     while($data = mysqli_fetch_array($res)){
                         ?>
-					<div class="item vhny-grid">
+				<div class="item vhny-grid">
+						<div class="box16 mb-0">
+							<figure>
+								<img class="img-fluid" src="admin/uploads/<?=$data['image']?>" alt="">
+							</figure>
+							<a href=".FightClub" data-toggle="modal">
+								<div class="box-content">
+									<h3 class="title"><?=$data['title']?></h3>
+									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 40min
+
+										</span>
+
+										<span class="post fa fa-heart text-right"></span>
+									</h4>
+								</div>
+							</a>
+							<!-- Modal -->
+							<div class="modal fade FightClub" id="myModal" tabindex="-1" role="dialog"
+								aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content" id="mymodalcontent">
+										<div class="modal-header">
+											<h4 class="modal-title" id="exampleModalLongTitle">Description</h4>
+											<button type="button" class="closebtn" data-dismiss="modal"
+												aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body" id="dynamic-content">
+											<img src="admin/uploads/<?=$data['image']?>" class="img-fluid modalimg" alt="" />
+											<p>
+												<h3>Release Date&nbsp;:<?=$data['releasedate']?></h3>
+												
+											</p>
+											<h4>About Movie :</h4>
+											<p>
+											<?=$data['description']?>
+											</p>
+											<h4>Rating :</h4>
+											<p>
+											<?=$data['rating']?>
+											</p>
+											
+										</div>
+										<div class="bookbtn">
+											<button type="button" class="btn btn-success"
+												onclick="location.href='ticket-booking.html';">Book
+											</button>
+										</div>
+										<div class="w-trailer pb-3">
+											<!-- Button to Watch Trailer -->
+											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#trailerModal" 
+											onclick="setTrailer('admin/uploads/<?=$data['trailer']?>')">Watch Trailer</button>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							<!-- modal end -->
+						</div>
+					</div>
+					<?php
+					}
+				}
+					?>
+					
+					<!-- SECOND MOVIE -->
+					<?php
+					$movieid = 2;
+					$sql = "SELECT movies.*, categories.catname 
+					FROM movies
+					INNER JOIN categories on categories.catid = movies.catid
+					WHERE movies.movieid = $movieid";
+					$res = mysqli_query($conn, $sql);
+
+					if(mysqli_num_rows($res) > 0){
+                    while($data = mysqli_fetch_array($res)){
+                        ?>
+				<div class="item vhny-grid">
 						<div class="box16 mb-0">
 							<figure>
 								<img class="img-fluid" src="admin/uploads/<?=$data['image']?>" alt="">
@@ -184,7 +265,7 @@ include('header.php');
 							<a href=".Commando3" data-toggle="modal">
 								<div class="box-content">
 									<h3 class="title"><?=$data['title']?></h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 40min
+									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 10min
 
 										</span>
 
@@ -224,7 +305,8 @@ include('header.php');
 											<button type="button" class="btn btn-success"
 												onclick="location.href='ticket-booking.html';">Book
 											</button>
-
+										</div>
+										<div class="w-trailer pb-3">
 											<!-- Button to Watch Trailer -->
 											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#trailerModal" 
 											onclick="setTrailer('admin/uploads/<?=$data['trailer']?>')">Watch Trailer</button>
@@ -236,208 +318,12 @@ include('header.php');
 							<!-- modal end -->
 						</div>
 					</div>
-
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<figure>
-								<img class="img-fluid" src="admin/uploads/<?=$data['image']?>" alt="">
-							</figure>
-							<a href=".Knivesout" data-toggle="modal">
-								<div class="box-content">
-									<h3 class="title">Knives Out</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 10min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-							</a>
-							<!-- Modal -->
-							<div class="modal fade Knivesout" id="myModal" tabindex="-1" role="dialog"
-								aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content" id="mymodalcontent">
-										<div class="modal-header">
-											<h4 class="modal-title" id="exampleModalLongTitle">DETAILS</h4>
-											<button type="button" class="closebtn" data-dismiss="modal"
-												aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body" id="dynamic-content">
-											<img src="assets/images/m3.jpg" class="img-fluid modalimg" alt="" />
-											<p>
-												<h3>Release Date&nbsp;:September 7, 2019 </h3>
-												<h3>Venue&nbsp;:Cg Road </h3>
-											</p>
-											<h4>About Movie</h4>
-											<p>
-												Knives Out is a 2019 American mystery film written and directed by Rian
-												Johnson, and produced by Johnson and Ram Bergman. It follows a master
-												detective investigating the death of the patriarch of a wealthy,
-												dysfunctional family. The film features an ensemble cast including
-												Daniel Craig, Chris Evans, Ana de Armas, Jamie Lee Curtis, Michael
-												Shannon, Don Johnson, Toni Collette, Lakeith Stanfield, Katherine
-												Langford, Jaeden Martell, and Christopher Plummer.
-											</p>
-											<h4>Star Cast</h4>
-											<p>
-												Daniel Craig as Benoit Blanc<br />
-												Chris Evans as Hugh "Ransom" Drysdale<br />
-												Ana de Armas as Marta Cabrera<br />
-												Jamie Lee Curtis as Linda Drysdale<br />
-												Michael Shannon as Walt Thrombey
-											</p>
-										</div>
-										<div class="bookbtn">
-											<button type="button" class="btn btn-success"
-												onclick="location.href='ticket-booking.html';">Book</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- modal end -->
-
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<figure>
-								<img class="img-fluid" src="assets/images/bharat1.png" alt="">
-							</figure>
-							<a href=".Bharat" data-toggle="modal">
-								<div class="box-content">
-									<h3 class="title">Bharat</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 35min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-							</a>
-							<!-- Modal -->
-							<div class="modal fade Bharat" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content" id="mymodalcontent">
-										<div class="modal-header">
-											<h4 class="modal-title" id="exampleModalLongTitle">DETAILS</h4>
-											<button type="button" class="closebtn" data-dismiss="modal"
-												aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body" id="dynamic-content">
-											<img src="assets/images/bharat1.png" class="img-fluid modalimg" alt="" />
-											<p>
-												<h3>Release Date&nbsp;:5 June 2019 </h3>
-												<h3>Venue&nbsp;:Cg Road </h3>
-											</p>
-											<h4>About Movie</h4>
-											<p>
-												Bharat is a 2019 Indian Hindi-language drama film written and directed
-												by Ali Abbas Zafar. It is jointly produced by Atul Agnihotri, Alvira
-												Khan Agnihotri, Bhushan Kumar, Krishan Kumar, Nikhil Namit and Salman
-												Khan under the banners Reel Life Productions, Salman Khan Films and
-												T-Series. The film stars Salman Khan, Katrina Kaif, Sunil Grover, Disha
-												Patani and Jackie Shroff. Tabu makes a friendly appearance. It traces
-												India's post-independence history from the perspective of a common man,
-												and follows his life from the age of 8 to 70.
-											</p>
-											<h4>Star Cast</h4>
-											<p>
-												Salman Khan as Bharat Kumar<br />
-												Katrina Kaif as Kumud Raina Kumar<br />
-												Disha Patani as Radha Mathur<br />
-												Sunil Grover as Vilayti Khan<br />
-												Jackie Shroff as Gautam Kumar
-											</p>
-										</div>
-										<div class="bookbtn">
-											<button type="button" class="btn btn-success"
-												onclick="location.href='ticket-booking.html';">Book</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- modal end -->
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<figure>
-								<img class="img-fluid" src="assets/images/m5.jpg" alt="">
-							</figure>
-							<a href=".Jumanji" data-toggle="modal">
-								<div class="box-content">
-									<h3 class="title">Jumanji : The Next Level</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 3min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-							</a>
-							<!-- Modal -->
-							<div class="modal fade Jumanji" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content" id="mymodalcontent">
-										<div class="modal-header">
-											<h4 class="modal-title" id="exampleModalLongTitle">DETAILS</h4>
-											<button type="button" class="closebtn" data-dismiss="modal"
-												aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body" id="dynamic-content">
-											<img src="assets/images/m5.jpg" class="img-fluid modalimg" alt="" />
-											<p>
-												<h3>Release Date&nbsp;:December 13, 2019 </h3>
-												<h3>Venue&nbsp;:Cg Road </h3>
-											</p>
-											<h4>About Movie</h4>
-											<p>
-												Jumanji: The Next Level is a 2019 American fantasy adventure comedy film
-												directed by Jake Kasdan and co-written by Kasdan, Jeff Pinkner, and
-												Scott Rosenberg. It is a sequel to 2017's Jumanji: Welcome to the
-												Jungle, the second follow-up to 1995's Jumanji, and is the fourth
-												installment in the Jumanji franchise. It stars Dwayne Johnson, Jack
-												Black, Kevin Hart, Karen Gillan, Nick Jonas, Alex Wolff, Morgan Turner,
-												Ser'Darius Blain, and Madison Iseman reprising their roles from the
-												previous film while Awkwafina, Rory McCann, Danny Glover, and Danny
-												DeVito also join the cast. The film's plot takes place two years after
-												Welcome to the Jungle, in which the same group of teenagers, along with
-												an old friend and two unwitting additions, become trapped in Jumanji.
-												There, they all find themselves facing new problems and challenges with
-												both old and new avatars while having to save the land from a new
-												villain in order to escape.
-											</p>
-											<h4>Star Cast</h4>
-											<p>
-												Dwayne Johnson as Dr. Xander "Smolder" Bravestone<br />
-												Jack Black as Professor Sheldon "Shelly" Oberon<br />
-												Kevin Hart as Franklin "Mouse" Finbar<br />
-												Karen Gillan as Ruby Roundhouse<br />
-												Nick Jonas as Jefferson "Seaplane" McDonough
-											</p>
-										</div>
-										<div class="bookbtn">
-											<button type="button" class="btn btn-success"
-												onclick="location.href='ticket-booking.html';">Book</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- modal end -->
-
-						</div>
-					</div>
 					<?php
 					}
 				}
-					?> 
+					?>
+					
+					 
 				</div>
 
 				<!-- ***********************************Adults Section ************************************** -->

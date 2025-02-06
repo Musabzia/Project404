@@ -95,8 +95,9 @@ if (mysqli_num_rows($res) > 0) {
     while ($data = mysqli_fetch_array($res)) {
         ?>
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch init aos-animate" data-aos="fade-up">
-        </div>
+        </div><?php
     }
 }
+        ?>
 </body>
 </html>
