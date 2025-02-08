@@ -1,5 +1,5 @@
 <?php
-include ('connect.php');
+include('connect.php');
 
 // Check if the user is logged in
 $isLoggedIn = isset($_SESSION['user_id']);
@@ -73,26 +73,12 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                     <!-- search popup -->
                     <div id="search" class="pop-overlay">
                         <div class="popup">
-                            <form action="#" method="post" class="search-box">
-                                <input type="search" placeholder="Search your Keyword" name="search"
-                                    required="required" autofocus="">
+                            <form action="search.php" method="get" class="search-box">
+                                <input type="search" placeholder="Search by movie name" name="query" required="required" autofocus="">
                                 <button type="submit" class="btn">
                                     <span class="fa fa-search" aria-hidden="true"></span>
                                 </button>
                             </form>
-                            <div class="browse-items">
-                                <h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
-                                <ul class="search-items">
-                                    <li><a href="movies.html">Action</a></li>
-                                    <li><a href="movies.html">Drama</a></li>
-                                    <li><a href="movies.html">Family</a></li>
-                                    <li><a href="movies.html">Thriller</a></li>
-                                    <li><a href="movies.html">Comedy</a></li>
-                                    <li><a href="movies.html">Romantic</a></li>
-                                    <li><a href="movies.html">Tv-Series</a></li>
-                                    <li><a href="movies.html">Horror</a></li>
-                                </ul>
-                            </div>
                         </div>
                         <a class="close" href="#close">×</a>
                     </div>

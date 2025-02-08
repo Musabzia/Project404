@@ -41,10 +41,7 @@
 							<a class="nav-link" href="dashboard.php">Dashboard</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="movies.php">Movies</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="categories.php">Categories</a>
+							<a class="nav-link" href="movies.php">Movies / Categories</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="theaters.php">Theaters</a>
