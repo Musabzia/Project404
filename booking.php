@@ -4,7 +4,6 @@ include('connect.php');
 if(!isset($_SESSION['uid'])){
   echo "<script> window.location.href='login.php';  </script>";
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
