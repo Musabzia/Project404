@@ -47,13 +47,10 @@
 							<a class="nav-link" href="theaters.php">Theaters</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="classes.php">Classes</a>
+							<a class="nav-link" href="viewusers.php">Users</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="users.php">Users</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="bookings.php">Bookings</a>
+							<a class="nav-link" href="viewbookings.php">Bookings</a>
 						</li>
 
 						<li class="nav-item">
@@ -63,46 +60,7 @@
 
 					<!--/search-right-->
 					<!--/search-right-->
-					<div class="search-right">
-						<a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search">Search <span
-								class="fa fa-search ml-3" aria-hidden="true"></span></a>
-						<!-- search popup -->
-						<div id="search" class="pop-overlay">
-							<div class="popup">
-								<form action="#" method="post" class="search-box">
-									<input type="search" placeholder="Search your Keyword" name="search"
-										required="required" autofocus="">
-									<button type="submit" class="btn"><span class="fa fa-search"
-											aria-hidden="true"></span></button>
-								</form>
-								<div class="browse-items">
-									<h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
-									<ul class="search-items">
-										<li><a href="movies.html">Action</a></li>
-										<li><a href="movies.html">Drama</a></li>
-										<li><a href="movies.html">Family</a></li>
-										<li><a href="movies.html">Thriller</a></li>
-										<li><a href="movies.html">Commedy</a></li>
-										<li><a href="movies.html">Romantic</a></li>
-										<li><a href="movies.html">Tv-Series</a></li>
-										<li><a href="movies.html">Horror</a></li>
-										<li><a href="movies.html">Action</a></li>
-										<li><a href="movies.html">Drama</a></li>
-										<li><a href="movies.html">Family</a></li>
-										<li><a href="movies.html">Thriller</a></li>
-										<li><a href="movies.html">Commedy</a></li>
-										<li><a href="movies.html">Romantic</a></li>
-										<li><a href="movies.html">Tv-Series</a></li>
-										<li><a href="movies.html">Horror</a></li>
-									</ul>
-								</div>
-							</div>
-							<a class="close" href="#close">×</a>
-						</div>
-						<!-- /search popup -->
-						<!--/search-right-->
-
-					</div>
+					
 					
 				</div>
 				<!-- toggle switch for light and dark theme -->
@@ -122,28 +80,7 @@
 			</div>
 		</nav>
 	</header>
-	<!-- main-slider -->
-	<!-- <section class="w3l-main-slider position-relative" id="home">
-		<div class="companies20-content">
-			<div class="owl-one owl-carousel owl-theme">
-				<div class="item">
-					<li>
-						<div class="slider-info banner-view bg bg2">
-							<div class="banner-info">
-								<h3>Latest Movie Trailers</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="over-para">
-										Consequuntur hic odio
-										voluptatem tenetur consequatur.</span></p>
-								<a href="#small-dialog1" class="popup-with-zoom-anim play-view1">
-									<span class="video-play-icon">
-										<span class="fa fa-play"></span>
-									</span>
-									<h6>Watch Trailer</h6>
-								</a>
-								<div id="small-dialog1" class="zoom-anim-dialog mfp-hide">
-									<iframe src="https://player.vimeo.com/video/358205
-
-</html>
+	
 <!-- responsive tabs -->
 <script src="../assets/js/jquery-1.9.1.min.js"></script>
 <script src="../assets/js/easyResponsiveTabs.js"></script>

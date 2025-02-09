@@ -93,7 +93,7 @@ else {
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-lg-6 px-5 py-5">
+        <div class="col-lg-6 px-5 " style="padding-top:7rem">
             <h3>Add Theater</h3>
             <form action="" method="post">
                 <div class="form-group mb-4">
@@ -141,7 +141,7 @@ else {
             </form>
         </div>
 
-        <div class="col-lg-6 px-5 py-5">
+        <div class="col-lg-6 px-5" style="padding-top:7rem">
             <h3>Theater List</h3>
             <div class="table-responsive">
                 <table class="table table-striped">

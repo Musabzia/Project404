@@ -97,7 +97,7 @@ while ($data = mysqli_fetch_array($res)) {
                                                         <p><?= $data['rating'] ?></p>
                                                     </div>
                                                     <div class="bookbtn">
-                                                        <button type="button" class="btn btn-success" onclick="location.href='ticket-booking.html';">Book</button>
+                                                        <button type="button" class="btn btn-success" onclick="location.href='theaters.php';">Book</button>
                                                     </div>
                                                     <div class="w-trailer pb-3">
                                                         <!-- Button to Watch Trailer -->

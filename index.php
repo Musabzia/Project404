@@ -1,8 +1,13 @@
 <?php
 include ('connect.php');
 
+if(!isset($_SESSION['user_id'])){
+    echo "<script>window.location.href = 'sign_in.php';</script>";
+    exit();
+}
+
 // Fetch all movies
-$sql = "SELECT * FROM movies ORDER BY movieid DESC";
+$sql = "SELECT * FROM movies ORDER BY movieid ";
 $res = mysqli_query($conn, $sql);
 ?>
 
